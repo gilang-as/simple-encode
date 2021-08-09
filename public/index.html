@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple HLS Encoded</title>
+</head>
+<body>
+    <div class="artplayer-app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+    <script>
+        var art = new Artplayer({
+            container: '.artplayer-app',
+            url: 'https://raw.githubusercontent.com/gilang-as/simple-encode/main/videos/encoded/index.m3u8',
+            quality: [
+                {
+                    default: true,
+                    name: 'Default',
+                    url: 'https://raw.githubusercontent.com/gilang-as/simple-encode/main/videos/encoded/index.m3u8',
+                },
+                {
+                    name: 'HD 720P',
+                    url: 'https://raw.githubusercontent.com/gilang-as/simple-encode/main/videos/encoded/720p.m3u8',
+                },
+                {
+                    name: 'SD 480P',
+                    url: 'https://raw.githubusercontent.com/gilang-as/simple-encode/main/videos/encoded/480p.m3u8',
+                },
+                {
+                    name: 'SD 360P',
+                    url: 'https://raw.githubusercontent.com/gilang-as/simple-encode/main/videos/encoded/360p.m3u8',
+                }
+            ],
+        });
+    </script>
+</body>
+</html>
